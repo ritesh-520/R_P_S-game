@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title>
+        
+    </title>
+    <link rel ="stylesheet" href ="R-P-S.CSS">
+    </head>
+    <body>
+       
+        <div class = "main-container">
+             <div  class ="ROCK"> <button class = "on" onclick ="
+                        computerMove = computerMove_action();
+                        playerMove('ROCK');"
+                        >
+                        <img class = "image" style = "margin-left:14px;" src = "game-images/rock.png">ROCK</button>
+            </div>
+            <div class ="PAPER">
+                <button  class ="on"                          
+                        onclick ="
+                           computerMove = computerMove_action();
+                            playerMove('PAPER');"
+                            ><img class = "image" src = "game-images/paper.png">PAPER
+                            
+                </button>
+            </div>
+             <div class ="SCISSOR">
+                    <button class ="on" 
+                                onclick ="
+                                computerMove = computerMove_action();
+                                playerMove('SCISSOR');"
+                                    > <img class = "image" src = "game-images/scissor.png">SCISSORS
+                                   
+                    </button>
+            </div>
+            <div class = "captions">RULES: 
+                
+                    <div style=" display:flex;flex-direction: row;"><p>*</p> <p> For every move you make it costs you 1Rs..</p></div>
+                     <div style = "display:flex;flex-direction: row;"><p>*</p><p> For every win you will be rewarded 5Rs..</p></div>
+                     <div style = "display:flex;flex-direction: row;"><p>*</p>  <p>you can only restart the game  after completing       the payment
+                        by clicking on pay </p></div> 
+                      <div style = "display:flex;flex-direction: row;"><p>*</p> <p> no money will be deducted for the matches you lost and nothing will be paid for the matches that are tied 
+                    </p></div>
+            </div>
+
+
+            <div style="width:300px;flex-direction: row;"><p style ="display: inline-block;">payment:</p>
+                       
+                 <input onkeydown=" 
+                  const  b = document.querySelector('.payment-status');
+                  
+                 if(event.key === 'Enter' && b.value === 'completed' )
+                 {
+                          console.log(event);
+                        your_payment();
+
+                    }
+                    else if(event.key === 'Enter' ){
+                        alert('please enter the word completed here');
+                    }"
+                    class = "payment-status" placeholder ="not completed"></div>
+                        
+            <div>
+                <button 
+                    class = "pay" onclick="your_payment(); ">pay now
+                </button>
+                <button class = "refresh_button" onclick = "
+                finish();"
+                >
+                    refresh
+                </button>
+            </div> 
+        </div>
+                    <div style ="display: flex; flex-direction :row;">
+                        <p   style  = "display:flex;font-weight:bold;" >Total cost:</p>
+                        <p  class = "total-cost"> NO Cost</p>
+
+                    </div>
+                    
+                    <div style ="display:flex;flex-direction:row;">
+                        <p style = "display:flex;font-weight:bold;">Total rewards:</p>
+                        <p class = "total-rewards"> NO rewards
+
+                        </p>
+                    </div>
+                    <div>
+                        <button  class = "butt" style = "background-color:rgb(215, 208, 208); color:black;" onclick = " my_game_score = my_Score();
+                            console.log(my_Score());
+                            alert(`wins : ${score.wins}  loses : ${ score.loses}  ties : ${ score.ties}`);">
+                                SCORE
+                        </button>
+                    </div>
+                    <div>
+                        <button class = "butt" 
+                              style = "background-color: rgb(215, 213, 213);color:black;font-weight:500px;font-size:25px;" onclick = " finish(); ">
+                            reset
+                        </button>
+                    </div>
+                           
+                    <div>
+                        <button class = "display_button" >
+                            <p class ="display_score">hello this is where score is displayed</p>
+                        </button>
+                    </div>
+                  
+               </body>
+<script src = "js-code/R-P-S.js">
+    
+</script></html>
